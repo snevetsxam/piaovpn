@@ -10,7 +10,7 @@ Make sure that you have configured a routing table ``piatunnel`` on your system:
 echo 200 piatunnel >> /etc/iproute2/rt_tables
 ```
 
-Get the [PIA openvpn.zip](https://www.privateinternetaccess.com/openvpn/openvpn.zip), extract it and make sure that the certs a in the same directory as ![pia_swe.ovpn](pia_swe.ovpn). Note that ![pia_swe.ovpn](pia_swe.ovpn) is derived from the sweden config file provided in that zip from pia.
+Get the [PIA openvpn.zip](https://www.privateinternetaccess.com/openvpn/openvpn.zip), extract it and make sure that the certs etc. are in the same directory as ![pia_swe.ovpn](pia_swe.ovpn); same goes for ``vpn-up/down.sh``. Note that ![pia_swe.ovpn](pia_swe.ovpn) is derived from the sweden config file provided in that zip from pia.
 
 ### start it
 establish the vpn
@@ -19,7 +19,7 @@ sudo openvpn swe_pia.ovpn
 ```
 start ``rtorrent`` with the bind option
 ```sh
-rtorrentvpnip.sh
+./rtorrentvpnip.sh
 ```
 
 ### ![rtorrentvpnip.sh](rtorrentvpnip.sh) 
