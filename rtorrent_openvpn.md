@@ -14,3 +14,8 @@ Make sure that you have configured a routing table ``piatunnel`` on your system:
 
 ## Read further
 https://wiki.archlinux.org/index.php/RTorrent
+
+## Todo
+* The openvpn resets itself every now and then, in this case the IP which rtorrent has been bind to is not valid anymore. Either re-execute ![rtorrentvpnip.sh](rtorrentvpnip.sh) or implement a script that tells rtorrent to bind to another IP 
+* update ![rtorrentvpnip.sh](rtorrentvpnip.sh) to figure out the openvpn tunnel itself 
+* enable ![https://www.privateinternetaccess.com/forum/discussion/180/port-forwarding-without-the-application-advanced-users](PIA portforwarding) and configure rtorrent use the fwd'd-port 
