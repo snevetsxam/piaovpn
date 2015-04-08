@@ -1,5 +1,5 @@
 ## Intro
-Set up a VPN (in this case pia) and start & bind ``rtorrent`` on that tunnel
+Set up a VPN (in this case [Private Internet Access](https://www.privateinternetaccess.com) and start & bind ``rtorrent`` on that tunnel
 Inspired by: http://www.ichimonji10.name/blog/1/
 
 Note that only ``rtorrent`` traffic will be routed through the tunnel, everything else goes the normal way. 
