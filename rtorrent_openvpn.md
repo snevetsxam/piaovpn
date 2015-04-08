@@ -1,16 +1,29 @@
 ## Intro
-Set up an openvpn VPN to (in this case pia) and start & bind ``rtorrent`` on that tunnel
-
+Set up a VPN (in this case pia) and start & bind ``rtorrent`` on that tunnel
 Inspired by: http://www.ichimonji10.name/blog/1/
 
-### ![rtorrentvpnip.sh](rtorrentvpnip.sh) 
-Based on the configured tunnel, in example ``tun1``, get the local IP for the established VPN and start ``rtorrent`` with the ``-b`` (bind) parameter to bind to the local VPN IP.
+Note that only ``rtorrent`` traffic will be routed through the tunnel, everything else goes the normal way. 
 
 ## Perquisite 
 Make sure that you have configured a routing table ``piatunnel`` on your system:
 ```sh
-> echo 200 piatunnel >> /etc/iproute2/rt_tables
+echo 200 piatunnel >> /etc/iproute2/rt_tables
 ```
+
+Get the [PIA openvpn.zip](https://www.privateinternetaccess.com/openvpn/openvpn.zip), extract it and make sure that the certs a in the same directory as ![pia_swe.ovpn](pia_swe.ovpn). Note that ![pia_swe.ovpn](pia_swe.ovpn) is derived from the sweden config file provided in that zip from pia.
+
+### start it
+establish the vpn
+```sh
+sudo openvpn swe_pia.ovpn
+```
+start ``rtorrent`` with the bind option
+```sh
+rtorrentvpnip.sh
+```
+
+### ![rtorrentvpnip.sh](rtorrentvpnip.sh) 
+Based on the configured tunnel, in example ``tun1``, get the local IP for the established VPN and start ``rtorrent`` with the ``-b`` (bind) parameter to bind to the local VPN IP.
 
 ## Read further
 https://wiki.archlinux.org/index.php/RTorrent
