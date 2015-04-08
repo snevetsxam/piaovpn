@@ -3,7 +3,7 @@ Set up an openvpn VPN to (in this case pia) and start & bind ``rtorrent`` on tha
 
 Inspired by: http://www.ichimonji10.name/blog/1/
 
-### [rtorrentvpnip.sh] 
+### ![rtorrentvpnip.sh](rtorrentvpnip.sh) 
 Based on the configured tunnel, in example ``tun1``, get the local IP for the established VPN and start ``rtorrent`` with the ``-b`` (bind) parameter to bind to the local VPN IP.
 
 ## Perquisite 
