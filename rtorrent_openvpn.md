@@ -4,7 +4,7 @@ Inspired by: http://www.ichimonji10.name/blog/1/
 
 Note that only ``rtorrent`` traffic will be routed through the tunnel, everything else goes the normal way. 
 
-## Perquisite 
+## Prerequisite 
 Make sure that you have configured a routing table ``piatunnel`` on your system:
 ```sh
 echo 200 piatunnel >> /etc/iproute2/rt_tables
