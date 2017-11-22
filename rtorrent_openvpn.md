@@ -15,7 +15,7 @@ Get the [PIA openvpn.zip](https://www.privateinternetaccess.com/openvpn/openvpn.
 ### start it
 establish the vpn
 ```sh
-sudo openvpn swe_pia.ovpn
+sudo openvpn pia_swe.ovpn
 ```
 start ``rtorrent`` with the bind option
 ```sh
